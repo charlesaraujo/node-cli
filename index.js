@@ -20,8 +20,15 @@ const { clear, debug } = flags;
 	input.includes(`help`) && cli.showHelp(0);
 
 	debug && log(flags);
+
+	if (flags.type !== `explicit`) {
+		flags.type = `nerdy`;
+	}
+	console.log(`http://api.icndb.com/jokes/random/?limitTo=[${flags.type}]`);
 	if (input.includes(`joke`)) {
-		const { data } = await axios.get(`http://api.icndb.com/jokes/random`);
+		const { data } = await axios.get(
+			`http://api.icndb.com/jokes/random/?limitTo=[${flags.type}]`
+		);
 		log(data.value.joke);
 	}
 })();

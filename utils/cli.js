@@ -23,6 +23,12 @@ const flags = {
 		type: `boolean`,
 		alias: `v`,
 		desc: `Print CLI version`
+	},
+	type: {
+		type: `string`,
+		alias: `t`,
+		default: `nerdy`,
+		desc: `what kind of jokes do you want? [explicit|nerdy]`
 	}
 };
 
