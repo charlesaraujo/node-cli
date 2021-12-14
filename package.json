@@ -1,0 +1,39 @@
+{
+	"name": "node-cli",
+	"description": "criando um cli com node",
+	"version": "0.0.1",
+	"license": "MIT",
+	"bin": {
+		"node-cli": "index.js",
+		"mec": "index.js"
+	},
+	"author": {
+		"name": "Charles A Da Silva",
+		"email": "charles_araujo@ymail.com",
+		"url": "https://github.com/charlesaraujo"
+	},
+	"keywords": [
+		"node-cli",
+		"Charles A Da Silva"
+	],
+	"files": [
+		"index.js",
+		"utils"
+	],
+	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"dependencies": {
+		"axios": "^0.24.0",
+		"chalk": "^5.0.0",
+		"cli-alerts": "^1.2.2",
+		"cli-handle-error": "^4.4.0",
+		"cli-handle-unhandled": "^1.1.1",
+		"cli-meow-help": "^2.0.2",
+		"cli-welcome": "^2.2.2",
+		"meow": "^9.0.0"
+	},
+	"devDependencies": {
+		"prettier": "^2.5.1"
+	}
+}
